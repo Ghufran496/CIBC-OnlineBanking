@@ -1,0 +1,291 @@
+<div class="header">
+  <div class="header-top">
+    <div class="logo"></div>
+    <div class="top-links">
+      <a
+        href="#"
+        style="display: flex; justify-content: center; align-items: center"
+        ><mat-icon style="color: white" class="material-symbols-outlined"
+          >help_center</mat-icon
+        >Help Centre</a
+      >
+      <a style="display: flex; justify-content: center; gap: 6px" href="#"
+        >AdChoices <img src="../../../assets/img/addc.svg" class="right" alt=""
+      /></a>
+      <button class="signoff-button" (click)="onSignOff()">Sign off</button>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <img style="height: 40px" alt="" src="../../../assets/img/cibclogo.svg" />
+  </div>
+
+  <div class="header-bottom">
+    <div class="nav-links">
+      <button class="nav-button active">Banking</button>
+      <button class="nav-button">Investing</button>
+      <button class="nav-button">Products</button>
+      <button class="nav-button">Offers</button>
+    </div>
+    <div class="search-container">
+      <button class="search-button">
+        <img
+          alt=""
+          style="height: 20px; width: 20px"
+          src="../../../assets/img/search.png"
+        />
+        Search
+      </button>
+      <div class="notification-bubble">99+</div>
+    </div>
+  </div>
+</div>
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li class="active list">
+        <i class="icon">
+          <img
+            alt=""
+            style="height: 20px; width: 20px"
+            src="../../../assets/img/home.png"
+        /></i>
+
+        Home
+      </li>
+      <li class="list">
+        <i class="icon">
+          <img
+            alt=""
+            style="height: 20px; width: 20px"
+            src="../../../assets/img/wault.png"
+        /></i>
+        Account Details
+      </li>
+      <li class="list">
+        <i class="icon">
+          <img
+            alt=""
+            style="height: 20px; width: 20px"
+            src="../../../assets/img/document.png"
+        /></i>
+        My Documents
+      </li>
+    </ul>
+    <div class="sidebar-section">
+      <div class="sidebar-sectionhead" style="padding-left: 8px">
+        Move Money
+      </div>
+      <ul>
+        <li style="padding-left: 12px">Bill Payments</li>
+        <li style="padding-left: 12px">Transfer Funds</li>
+        <li style="padding-left: 12px">Interac e-Transfer</li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-sectionhead" style="padding-left: 8px">Advice</div>
+      <ul>
+        <li style="padding-left: 12px; padding-right: 12px">Net Worth</li>
+        <li style="padding-left: 12px; padding-right: 12px">Help Centre</li>
+        <li style="padding-left: 12px; padding-right: 12px">
+          Customer Services
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-sectionhead" style="padding-left: 8px">More</div>
+      <ul>
+        <li style="padding-left: 12px; padding-right: 12px">
+          Global Money Transfer
+        </li>
+        <li style="padding-left: 12px; padding-right: 12px">
+          Order Foreign Cash
+        </li>
+        <li style="padding-left: 12px; padding-right: 12px">
+          Buy Gold and Silver
+        </li>
+        <li style="padding-left: 12px; padding-right: 12px">
+          Check Credit Score
+        </li>
+        <li style="padding-left: 12px; padding-right: 12px">
+          Download Transactions
+        </li>
+        <li style="padding-left: 12px; padding-right: 12px">Manage</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Alert Section -->
+
+    <div class="alert">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 5px;
+        "
+      >
+        <mat-icon style="color: white;width:3rem;height: auto;">lightbulb_circle</mat-icon>
+
+        <p style="text-align: center;">Meet with a CIBC advisor to get your ambitions moving.</p>
+      </div>
+      <button style="text-align: center;display: flex; justify-content: center;align-items: center;">Get started <mat-icon style="color: white">arrow_forward_ios</mat-icon></button>
+    </div>
+
+    <!-- Accounts Section -->
+    <section class="accounts">
+      <!-- Deposit Account -->
+      <div class="deposit-accounts-title">DEPOSIT ACCOUNTS</div>
+      <div class="account-card">
+        <div class="account-info">
+          <div class="account-details">
+            <div class="account-title">Chequing</div>
+            <div
+              style="
+                height: 14px;
+                background-color: black;
+                width: 200px;
+                border: 1px solid blue;
+              "
+            ></div>
+          </div>
+          <img
+            alt=""
+            style="height: 70px; width: 70 px"
+            src="../../../assets/img/card.png"
+          />
+        </div>
+        <div class="account-balance">$30,423.58</div>
+        <div class="account-actions">
+          <button class="action-button">
+            <mat-icon style="color: black;">send</mat-icon> Send Money
+          </button>
+          <button class="action-button">
+            <mat-icon style="color: black;">sync_alt</mat-icon> Transfer funds
+          </button>
+          <button class="action-button more-button">⋯</button>
+        </div>
+      </div>
+
+      <!-- Credit Card -->
+      <div class="deposit-accounts-title">CREDIT CARDS</div>
+      <div class="account-card">
+        <div class="account-info">
+          <div class="account-details">
+            <div class="account-title">CIBC VISA</div>
+            <div
+              style="
+                height: 14px;
+                background-color: black;
+                width: 200px;
+                border: 1px solid blue;
+              "
+            ></div>
+          </div>
+          <img
+            alt=""
+            style="height: 70px; width: 70 px"
+            src="../../../assets/img/visa.png"
+          />
+        </div>
+        <div class="account-balance">$553.07</div>
+
+        <div class="account-actions">
+          <button class="action-button"> <mat-icon style="color: black;">credit_card</mat-icon>Pay card</button>
+          <button class="action-button more-button">⋯</button>
+        </div>
+      </div>
+    </section>
+    <div class="lending-section-title">LENDING ACCOUNTS</div>
+    <div class="lending-cards-container">
+      <div class="lending-card">
+        <p class="lending-card-title">RRSP Daily Interest Saving Account</p>
+        <div
+          style="
+            height: 14px;
+            background-color: black;
+            width: 150px;
+            border: 1px solid blue;
+            margin-bottom: 50px;
+          "
+        ></div>
+        <div class="lending-card-details">
+          <div class="lending-card-info">
+            <span class="lending-card-balance">$31,416.94</span>
+          </div>
+        </div>
+      </div>
+      <div class="lending-card">
+        <p class="lending-card-title">Mortgage</p>
+        <div
+          style="
+            height: 14px;
+            background-color: black;
+            width: 130px;
+            border: 1px solid blue;
+            margin-bottom: 50px;
+          "
+        ></div>
+        <div class="lending-card-details">
+          <div class="lending-card-info">
+            <span class="lending-card-balance">$539,622.14</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Right Sidebar -->
+  <aside class="right-sidebar">
+    <div class="profile-card-container">
+      <div class="profile-card">
+        <div class="profile-icon">JL</div>
+        <p class="profile-text">Profile</p>
+      </div>
+      <div class="profile-card">
+        <div class="profile-icon2">
+          <mat-icon style="color: #a51b34">shield_with_house</mat-icon>
+        </div>
+        <p class="profile-text">Account Security</p>
+      </div>
+    </div>
+    <div style="padding-bottom: 10px; padding-top: 60px">PRODUCTS</div>
+    <div class="profile-card-container">
+      <div class="profile-card">
+        <div class="profile-icon2">
+          <mat-icon style="color: #a51b34">shopping_cart</mat-icon>
+        </div>
+        <p class="profile-text">Activate Card</p>
+      </div>
+      <div class="profile-card">
+        <div class="profile-icon2">
+          <mat-icon style="color: #a51b34">credit_card</mat-icon>
+        </div>
+        <p class="profile-text">Activate Card</p>
+      </div>
+    </div>
+    <div style="padding-bottom: 0; padding-top: 60px">HELP AND SUPPORT</div>
+    <div class="support-section">
+      <div class="support-item">
+        <mat-icon style="color: #a51b34">event</mat-icon>
+        <p>Book a meeting</p>
+        <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+      </div>
+      <div class="support-item">
+        <mat-icon style="color: #a51b34">location_on</mat-icon>
+        <p>Find a CIBC Banking Centre</p>
+        <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+      </div>
+      <div class="support-item">
+        <mat-icon style="color: #a51b34" class="material-symbols-outlined"
+          >help_center</mat-icon
+        >
+        <p>Help Centre</p>
+        <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+  </aside>
+</div>

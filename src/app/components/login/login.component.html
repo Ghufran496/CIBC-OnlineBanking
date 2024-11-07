@@ -1,0 +1,320 @@
+<app-login-header></app-login-header>
+<div class="background-pattern"></div>
+<div>
+  <main style="position: relative">
+    <div class="masthead">
+      <h1>
+        <span class="preheading">CIBC Online Banking</span
+        ><span class="show-for-sr">&nbsp;</span> Sign on using your CIBC card
+        number
+      </h1>
+      <div class="subheading">
+        Not registered for Online Banking or Mobile Banking?
+        <a
+          href="/ebm-resources/online-banking/client/index.html#/auth/register/card-info"
+          aria-label="Register now."
+          data-test-id="register-now-link"
+          >Register now.</a
+        >
+      </div>
+    </div>
+    <div class="grid">
+      <div
+        class="section-wrapper section-wrapper-signon"
+        style="padding: 50px !important"
+      >
+        <div class="signon-form-wrapper">
+          <div class="ui-set-messages global-error"></div>
+          <div class="signon-form">
+            <div role="form" class="signon-elements-wrapper">
+              <div class="card-number-wrapper">
+                <div class="card-number-input-field" data-test-id="card-number">
+                  <div class="ui-set-text-box-wrapper">
+                    <label class="ui-partial-label" for="11-field"
+                      >Card number</label
+                    >
+                    <div class="ui-wrapper">
+                      <input
+                        id="11-field"
+                        type="text"
+                        name="cardnumber"
+                        maxlength="19"
+                        aria-describedby="vue11-messages CardTypeIconId-10"
+                        aria-invalid="false"
+                        autocomplete="cc-number"
+                        data-test-id="card-number-input"
+                        error="false"
+                        class=""
+                        style="width: 100%"
+                        [(ngModel)]="cardNumber"
+                        (input)="formatCardNumber()"
+                        (keydown)="restrictToNumbers($event)"
+                      />
+                    </div>
+                    <div id="vue11-messages" class="ui-set-messages">
+                      <!-- Display the error message if there is one -->
+                      <span
+                        *ngIf="cardNumberErrorMessage"
+                        style="color: #a51b34"
+                        >{{ cardNumberErrorMessage }}</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="remember-card">
+                  <div class="ui-set-checkbox-wrapper">
+                    <div class="ui-checkbox">
+                      <input
+                        id="remember-card-checkbox"
+                        class=""
+                        type="checkbox"
+                        aria-describedby="vue15-messages"
+                        data-test-id="remember-card-checkbox"
+                        value="true"
+                        required
+                      />
+                    </div>
+                    <label
+                      id="remember-card-label"
+                      class="ui-partial-label"
+                      for="remember-card-checkbox"
+                      >Remember this card number
+                    </label>
+                    <div id="vue15-messages" class="ui-set-messages"></div>
+                  </div>
+                  <div class="ui-set-popover-wrapper">
+                    <button
+                      aria-label="Help with remembering this card number. Opens in an overlay. To close, select escape."
+                      class="ui-button ui-popover-button"
+                      data-test-id="remember-card-popover-trigger"
+                      type="button"
+                      (click)="togglePopover($event)"
+                      style="border: none !important"
+                    ></button>
+
+                    <div
+                      *ngIf="isPopoverVisible"
+                      class="popover-content"
+                      (clickOutside)="hidePopover()"
+                    >
+                      <p>
+                        When you check off the box for “Remember this card
+                        number,” we apply a cookie that allows us to recognize
+                        your computer, so this card number will appear
+                        automatically on the sign-on page.
+                      </p>
+                      <p>
+                        “Remember this card number” is ideal if you’re the only
+                        user of this device. You shouldn’t use “Remember this
+                        card number” if you share a device with anyone, since
+                        the card number is saved on the device you’re using. For
+                        example, you shouldn’t use “Remember this card number”
+                        on public computers (such as at libraries and Internet
+                        cafés) or if you share a computer or tablet with
+                        someone.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="password-input-field-wrapper">
+                <div class="password-input-field">
+                  <div class="ui-set-text-box-wrapper">
+                    <label class="ui-partial-label" for="22-field"
+                      >Password (case sensitive)</label
+                    >
+                    <div class="ui-wrapper">
+                      <input
+                        id="22-field"
+                        [type]="showPassword ? 'text' : 'password'"
+                        maxlength="32"
+                        aria-describedby="vue22-messages"
+                        aria-invalid="false"
+                        autocomplete="current-password"
+                        data-test-id="password-input"
+                        error="false"
+                        class=""
+                        style="width: 100%"
+                        [(ngModel)]="password"
+                        (input)="checkFormValidity()"
+                      />
+                    </div>
+                    <div id="vue22-messages" class="ui-set-messages">
+                      <span
+                        *ngIf="passwordErrorMessage"
+                        style="color: #a51b34"
+                        >{{ passwordErrorMessage }}</span
+                      >
+                    </div>
+                  </div>
+                  <div class="ui-set-checkbox-wrapper">
+                    <div class="ui-checkbox">
+                      <input
+                        id="26-field"
+                        type="checkbox"
+                        aria-describedby="vue26-messages"
+                        data-test-id="show-password-checkbox"
+                        [(ngModel)]="showPassword"
+                      />
+                    </div>
+                    <label class="ui-partial-label" for="26-field"
+                      >Show password</label
+                    >
+                    <div id="vue26-messages" class="ui-set-messages"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="action-bar">
+                <button
+                  aria-label="Register now"
+                  class="btn btn-secondary"
+                  type="button"
+                >
+                  Register now
+                </button>
+                <button
+                  aria-label="Sign on"
+                  class="btn btn-primary"
+                  [disabled]="!isFormValid"
+                  type="button"
+                  (click)="onSignOn()"
+                >
+                  Sign on
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="section-wrapper section-wrapper-resources"
+        style="padding: 40px !important"
+      >
+        <div class="resources-wrapper" style="color: #383b3e !important">
+          <h2 class="heading-XS">Resources</h2>
+          <ul class="resources-link-container">
+            <li>
+              <a
+                class="body-S"
+                href="https://www.cibc.com/en/personal-banking/smart-advice/covid-19/financial-assistance.html?itrc=M416:3"
+                target="_blank"
+                aria-label="Request financial assistance. Opens in a new window."
+                data-test-id="request-financial-assistance-link"
+                style="display: flex; align-items: center"
+                ><span>Request financial assistance</span>
+                <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                class="body-S"
+                href="https://www.cibc.com/en/personal-banking/ways-to-bank/payroll-direct-deposit.html"
+                target="_blank"
+                aria-label="Set up direct deposit. Opens in a new window."
+                data-test-id="set-up-direct-deposit-link"
+                style="display: flex; align-items: center"
+                ><span>Set up direct deposit</span>
+                <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                class="body-S"
+                href="https://www.cibc.com/en/personal-banking/smart-advice/find-my-documents.html"
+                target="_blank"
+                aria-label="Tax slip mailing dates. Opens in a new window."
+                data-test-id="tax-slip-mailing-dates-link"
+                style="display: flex; align-items: center"
+                ><span>Tax slip mailing dates</span>
+                <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                class="body-S"
+                href="https://www.cibc.com/en/privacy-security/fraud-alerts.html?itrc=M164:13"
+                target="_blank"
+                aria-label="New fraud alerts. Opens in a new window."
+                data-test-id="new-fraud-alerts-link"
+                style="display: flex; align-items: center"
+                ><span>New fraud alerts</span>
+                <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-wrapper section-wrapper-ads">
+        <div class="advertisement-target target-signon-rotating">
+          <!-- Image Bottom/Right -->
+          <div
+            class="aem full-bleed-image-right signon-rotating en"
+            style="background-color: #ffffff"
+          >
+            <div class="content" style="background-color: #ffffff">
+              <span class="hidden-text">What follows is an advertisement.</span>
+              <h2 class="promo-headline">
+                We’ve enhanced our app to make mobile banking easier.
+              </h2>
+              <div style="display: flex; align-items: center">
+                <p class="promo-link" aria-hidden="true">Learn more</p>
+                <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+              </div>
+              <a
+                class="ma-link"
+                href="https://www.cibc.com/en/personal-banking/ways-to-bank/new-digital-banking-features.html?itrc=M715:11"
+                target="_blank"
+                ><span class="hidden-text"> Opens in a new window.</span></a
+              >
+            </div>
+            <img
+              alt=""
+              src="https://www.cibc.com/content/dam/api/olb/mass-ads/platform-modification/business-woman-mobile-phone-presign-left-anchor.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+              class="background-image"
+            />
+            <span class="hidden-text"
+              >This is the end of the advertisement.</span
+            >
+          </div>
+        </div>
+        <div class="advertisement-target target-signon-anchor">
+          <!-- Image Bottom/Right -->
+          <div
+            class="aem full-bleed-image-right signon-anchor en"
+            style="background-color: #ffffff"
+          >
+            <div class="content" style="background-color: #ffffff">
+              <span class="hidden-text">What follows is an advertisement.</span>
+              <h2 class="promo-headline">
+                Forgot your password? No problem. Reset it online or on your
+                phone, quickly and securely.
+              </h2>
+              <div style="display: flex; align-items: center">
+                <p class="promo-link" aria-hidden="true">Learn more</p>
+                <mat-icon style="color: #a51b34">arrow_forward_ios</mat-icon>
+              </div>
+              <a
+                class="ma-link"
+                href="https://www.cibc.com/en/personal-banking/ways-to-bank/how-to/password-reset.html?itrc=M715:1"
+                target="_blank"
+                ><span class="hidden-text">
+                  about how to reset your password.</span
+                ></a
+              >
+            </div>
+            <img
+              alt=""
+              src="https://www.cibc.com/content/dam/api/olb/mass-ads/password-reset/password-reset-right-anchor.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+              class="background-image"
+              style="display: block; height: 180px"
+            />
+            <span class="hidden-text"
+              >This is the end of the advertisement.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<app-login-footer></app-login-footer>

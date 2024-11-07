@@ -1,0 +1,528 @@
+/* Header container */
+.header {
+  background-color: #a60f36;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.signoff-button {
+  background-color: #a60f36;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+  margin-right: 100px;
+}
+
+/* Bottom section */
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #a60f36;
+  padding: 15px 130px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.nav-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button.active {
+  background-color: #a60f36;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-icon {
+  font-size: 18px;
+}
+
+.notification-bubble {
+  background-color: #d3e1f8;
+  color: #333;
+  padding: 3px 8px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-container {
+  display: flex;
+  background-color: white;
+  padding: 0 100px;
+}
+
+.sidebar {
+  width: 230px;
+
+  padding: 20px;
+}
+.list {
+  border: 2px solid rgb(232, 228, 228);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sidebar .active {
+  color: #a60f36;
+  font-weight: bold;
+}
+
+.sidebar-section {
+  margin-top: 20px;
+  border: 2px solid rgb(232, 228, 228);
+  border-radius: 8px;
+}
+.sidebar-sectionhead {
+  border-bottom: 2px solid rgb(232, 228, 228);
+  background-color: #d4cfcf;
+  font-weight: normal;
+  height: 50px;
+  padding-top: 10px;
+}
+
+.sidebar-section p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.alert {
+  background-color: #a60f36;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert button {
+  background-color: #a60f36;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deposit-accounts-title {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.account-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.account-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.account-title {
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.account-balance {
+  font-size: 24px;
+  color: #333;
+}
+
+.account-type {
+  background-color: #a60f36;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.account-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.more-button {
+  width: 35px;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.right-sidebar {
+  width: 350px;
+  padding: 20px;
+}
+
+.profile-card-container {
+  display: flex;
+  gap: 15px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  width: 140px;
+  height: 150px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: white;
+  text-align: left;
+  padding: 10px 15px 0 20px;
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #a60f36;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile-icon2 {
+  width: 50px;
+  height: 50px;
+  background-color: #ede9ea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #a60f36;
+}
+
+.profile-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.product-section,
+.support-section {
+  margin-top: 20px;
+}
+
+.product-section button,
+.support-section button {
+  width: 100%;
+  background-color: #f8f9fa;
+  color: #a60f36;
+  border: 1px solid #a60f36;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.support-section-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.support-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  color: #a60f36;
+  margin-right: 10px;
+}
+
+.support-item p {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.arrow {
+  font-size: 18px;
+  color: #a60f36;
+}
+
+.lending-section-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.lending-cards-container {
+  display: flex;
+  gap: 15px;
+}
+
+.lending-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lending-card-title {
+  font-weight: normal;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.lending-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.lending-card-balance {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* Small Devices (Tablets and Mobile Phones) */
+@media (max-width: 768px) {
+  .header-top, .header-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .nav-links, .search-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .account-card, .lending-card {
+    width: 100%;
+  }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-top, .header-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .sidebar, .main-content, .right-sidebar {
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 30%;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right-sidebar {
+    width: 30%;
+  }
+
+  .account-card, .lending-card {
+    width: 100%;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1024px) {
+  .dashboard-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  .sidebar {
+    width: 20%;
+  }
+
+  .main-content {
+    width: 60%;
+    padding: 20px;
+  }
+
+  .right-sidebar {
+    width: 20%;
+  }
+
+  .header-bottom, .nav-links, .search-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .account-card, .lending-card {
+    width: 100%;
+  }
+}
