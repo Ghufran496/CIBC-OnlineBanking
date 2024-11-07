@@ -128,11 +128,24 @@
           gap: 5px;
         "
       >
-        <mat-icon style="color: white;width:3rem;height: auto;">lightbulb_circle</mat-icon>
+        <mat-icon style="color: white; width: 3rem; height: auto"
+          >lightbulb_circle</mat-icon
+        >
 
-        <p style="text-align: center;">Meet with a CIBC advisor to get your ambitions moving.</p>
+        <p style="text-align: center">
+          Meet with a CIBC advisor to get your ambitions moving.
+        </p>
       </div>
-      <button style="text-align: center;display: flex; justify-content: center;align-items: center;">Get started <mat-icon style="color: white">arrow_forward_ios</mat-icon></button>
+      <button
+        style="
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Get started <mat-icon style="color: white">arrow_forward_ios</mat-icon>
+      </button>
     </div>
 
     <!-- Accounts Section -->
@@ -158,13 +171,18 @@
             src="../../../assets/img/card.png"
           />
         </div>
-        <div class="account-balance">$30,423.58</div>
+        <div
+          class="lending-card-balance"
+          *ngIf="accountData.depositAccount"
+        >
+          ${{accountData.depositAccount.balance|| "--"}} 
+        </div>
         <div class="account-actions">
           <button class="action-button">
-            <mat-icon style="color: black;">send</mat-icon> Send Money
+            <mat-icon style="color: black">send</mat-icon> Send Money
           </button>
           <button class="action-button">
-            <mat-icon style="color: black;">sync_alt</mat-icon> Transfer funds
+            <mat-icon style="color: black">sync_alt</mat-icon> Transfer funds
           </button>
           <button class="action-button more-button">⋯</button>
         </div>
@@ -191,10 +209,17 @@
             src="../../../assets/img/visa.png"
           />
         </div>
-        <div class="account-balance">$553.07</div>
+        <div
+          class="lending-card-balance"
+          *ngIf="accountData.creditCard"
+        >
+          ${{accountData.creditCard.balance|| "--"}} 
+        </div>
 
         <div class="account-actions">
-          <button class="action-button"> <mat-icon style="color: black;">credit_card</mat-icon>Pay card</button>
+          <button class="action-button">
+            <mat-icon style="color: black">credit_card</mat-icon>Pay card
+          </button>
           <button class="action-button more-button">⋯</button>
         </div>
       </div>
@@ -214,7 +239,12 @@
         ></div>
         <div class="lending-card-details">
           <div class="lending-card-info">
-            <span class="lending-card-balance">$31,416.94</span>
+            <div
+          class="lending-card-balance"
+          *ngIf="accountData.lendingAccount"
+        >
+          ${{accountData.lendingAccount.balance|| "--"}} 
+        </div>
           </div>
         </div>
       </div>
@@ -231,7 +261,12 @@
         ></div>
         <div class="lending-card-details">
           <div class="lending-card-info">
-            <span class="lending-card-balance">$539,622.14</span>
+            <div
+            class="lending-card-balance"
+            *ngIf="accountData.mortgage"
+          >
+            ${{accountData.mortgage.balance || "--"}} 
+          </div>
           </div>
         </div>
       </div>

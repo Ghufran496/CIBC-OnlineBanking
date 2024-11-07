@@ -1,1 +1,46 @@
-<p>update-form works!</p>
+<form style="margin-top: 20px" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Deposit Account (Chequing)</label>
+      <input
+        [(ngModel)]="data.depositAccount.balance"
+        name="chequing"
+        type="text"
+        required
+      />
+    </div>
+  
+    <div>
+      <label>Credit Card (CIBC VISA)</label>
+      <input
+        [(ngModel)]="data.creditCard.balance"
+        name="creditCard"
+        type="text"
+        required
+      />
+    </div>
+  
+    <div>
+      <label>Lending Account (RRSP Daily Interest)</label>
+      <input
+        [(ngModel)]="data.lendingAccount.balance"
+        name="lendingAccount"
+        type="text"
+        required
+      />
+    </div>
+  
+    <div>
+      <label>Mortgage</label>
+      <input
+        [(ngModel)]="data.mortgage.balance"
+        name="mortgage"
+        type="text"
+        required
+      />
+    </div>
+  
+    <button type="submit" [disabled]="loading">
+      {{ loading ? 'Loading...' : 'Update' }}
+    </button>
+  </form>
+  
