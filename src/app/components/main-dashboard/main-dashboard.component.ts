@@ -22,7 +22,7 @@ export class MainDashboardComponent {
     this.firebaseService.getValues().subscribe(
       (data) => {
         this.accountData = data;
-        console.log('accountData', this.accountData);
+        // console.log('accountData', this.accountData);
       },
       (error) => {
         console.error('Error fetching data:', error);
