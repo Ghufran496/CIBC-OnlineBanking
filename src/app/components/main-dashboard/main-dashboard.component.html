@@ -156,14 +156,6 @@
         <div class="account-info">
           <div class="account-details">
             <div class="account-title">Chequing</div>
-            <div
-              style="
-                height: 14px;
-                background-color: black;
-                width: 200px;
-                border: 1px solid blue;
-              "
-            ></div>
           </div>
           <img
             alt=""
@@ -172,7 +164,7 @@
           />
         </div>
         <div class="lending-card-balance" *ngIf="accountData?.depositAccount">
-          ${{ accountData?.depositAccount?.balance || "--" }}
+          ${{ formatBalance(accountData?.depositAccount?.balance) || "--" }}
         </div>
         <div class="account-actions">
           <button class="action-button">
@@ -191,14 +183,6 @@
         <div class="account-info">
           <div class="account-details">
             <div class="account-title">CIBC VISA</div>
-            <div
-              style="
-                height: 14px;
-                background-color: black;
-                width: 200px;
-                border: 1px solid blue;
-              "
-            ></div>
           </div>
           <img
             alt=""
@@ -207,7 +191,7 @@
           />
         </div>
         <div class="lending-card-balance" *ngIf="accountData?.creditCard">
-          ${{ accountData?.creditCard?.balance || "--" }}
+          ${{ formatBalance(accountData?.creditCard?.balance) || "--" }}
         </div>
 
         <div class="account-actions">
@@ -221,42 +205,26 @@
     <div class="lending-section-title">LENDING ACCOUNTS</div>
     <div class="lending-cards-container">
       <div class="lending-card">
-        <p class="lending-card-title">RRSP Daily Interest Saving Account</p>
-        <div
-          style="
-            height: 14px;
-            background-color: black;
-            width: 150px;
-            border: 1px solid blue;
-            margin-bottom: 50px;
-          "
-        ></div>
+        <p class="lending-card-title" style="margin-bottom: 30px">
+          RRSP Daily Interest Saving Account
+        </p>
         <div class="lending-card-details">
           <div class="lending-card-info">
             <div
               class="lending-card-balance"
               *ngIf="accountData?.lendingAccount"
             >
-              ${{ accountData?.lendingAccount?.balance || "--" }}
+              ${{ formatBalance(accountData?.lendingAccount?.balance) || "--" }}
             </div>
           </div>
         </div>
       </div>
       <div class="lending-card">
-        <p class="lending-card-title">Mortgage</p>
-        <div
-          style="
-            height: 14px;
-            background-color: black;
-            width: 130px;
-            border: 1px solid blue;
-            margin-bottom: 50px;
-          "
-        ></div>
+        <p class="lending-card-title" style="margin-bottom: 30px">Mortgage</p>
         <div class="lending-card-details">
           <div class="lending-card-info">
             <div class="lending-card-balance" *ngIf="accountData?.mortgage">
-              ${{ accountData?.mortgage?.balance || "--" }}
+              ${{ formatBalance(accountData?.mortgage?.balance) || "--" }}
             </div>
           </div>
         </div>

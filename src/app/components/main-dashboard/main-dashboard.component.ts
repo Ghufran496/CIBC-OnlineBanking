@@ -22,13 +22,21 @@ export class MainDashboardComponent {
     this.firebaseService.getValues().subscribe(
       (data) => {
         this.accountData = data;
-        // console.log('accountData', this.accountData);
+         console.log('accountData', this.accountData);
       },
       (error) => {
         console.error('Error fetching data:', error);
       }
     );
   }
+  formatBalance(balance: string | number): string {
+    const numericBalance = typeof balance === 'string' ? parseFloat(balance) : balance;
+    return numericBalance.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
   onSignOff(): void {
     this.router.navigate(['/']);
   }
